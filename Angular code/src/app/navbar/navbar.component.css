@@ -1,0 +1,152 @@
+.carousel-inner img {
+    width: 1600px;
+     height:600px;
+   /* object-fit: cover;*/
+ }
+ /*------Navigation bar design style------*/
+ .navbar {
+     min-height: 80px;
+   }
+   
+   .navbar-brand {
+     padding: 0 15px;
+     height: 80px;
+     line-height: 80px;
+     
+   }
+   
+   .navbar-toggle {
+     /* (80px - button height 34px) / 2 = 23px */
+     margin-top: 23px;
+     padding: 9px 10px !important;
+   }
+   
+   @media (min-width: 768px) {
+     .navbar-nav > li > a {
+       /* (80px - line-height of 27px) / 2 = 26.5px */
+       padding-top: 26.5px;
+       padding-bottom: 26.5px;
+       line-height: 27px;
+     }
+   }
+   /*---------------Rest body design---------------------------*/
+   .form-reg{
+       text-align: center    
+   }
+   
+   .div-wrapper {
+       height: 200px;
+       margin-top: 40px;
+   }
+   
+   body {
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   /*---------- Full-width input fields---------------- */
+   input[type=text], input[type=password],textarea {
+     width: 43%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     border: 1px solid #ccc;
+     box-sizing: border-box;
+   }
+   
+   /*------------Set a style for all buttons------------*/
+   button {
+     background-color: #4CAF50;
+     color: white;
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     cursor: pointer;
+     width: 20%;
+   }
+   
+   button:hover {
+     opacity: 0.8;
+   }
+   
+   /*------Center the image and position the close button-------*/
+   .imgcontainer {
+     text-align: center;
+     margin: 24px 0 12px 0;
+     position: relative;
+   }
+   
+   .container {
+     padding: 16px;
+   }
+   
+   /*---------The Modal (background)------------*/
+   .modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+     padding-top: 60px;
+     padding-left: 270px;
+   
+   }
+   
+   /*----------Modal Content/Box---------*/
+   .modal-content {
+     background-color: #fefefe;
+     margin: 5% auto 15% 10%; /* 5% from the top, 15% from the bottom and centered */
+     border: 1px solid #888;
+     width: 50%; /* Could be more or less, depending on screen size */
+   }
+   
+   /* The Close Button (x) */
+   .close {
+     position: absolute;
+     right: 25px;
+     top: 0;
+     color: #000;
+     font-size: 35px;
+     font-weight: bold;
+   }
+   
+   .close:hover,
+   .close:focus {
+     color: red;
+     cursor: pointer;
+   }
+   
+   /* Add Zoom Animation */
+   .animate {
+     -webkit-animation: animatezoom 0.6s;
+     animation: animatezoom 0.6s
+   }
+   
+   @-webkit-keyframes animatezoom {
+     from {-webkit-transform: scale(0)} 
+     to {-webkit-transform: scale(1)}
+   }
+     
+   @keyframes animatezoom {
+     from {transform: scale(0)} 
+     to {transform: scale(1)}
+   }
+   
+   footer {
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     padding: 1rem;
+     text-align: center;
+   }
+ h5{
+     text-align: left;
+ }  
+ table{
+     align-items: center;
+ }

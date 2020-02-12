@@ -1,0 +1,150 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="navbar-header">
+        <a class="navbar-brand"><img src="../../assets/charity.jfif" height="100%"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li><a class="nav-link" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Contact Us</a></li>
+        <li><a class="nav-link" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">About Us</a></li>
+      </ul>
+  
+        <ul class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"  data-toggle="dropdown">
+           Select City
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="mum()">mumbai</a>
+            <a class="dropdown-item" (click)="nag()">nagpur</a>
+            <a class="dropdown-item" (click)="pune()">pune</a>
+          </div>
+        </ul>
+        <!-- dynamic fetching-------->
+          <!-- <ul class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" (click)="dropfunc()"  data-toggle="dropdown">
+             Select City
+            </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/homePage" *ngFor="let drop of myvar">{{drop}}</a> 
+          </div>
+        </ul> -->
+        <input type="submit" class="btn btn-success" (click)="logout()" value="Logout">      
+    </div>
+  </nav>
+  <body style="background-color: rgb(251, 255, 212);">
+<div>
+
+  <!-- <input type="button" value="Select" (click)="mum()"> -->
+  <table align="center" border="2px">
+    <tr>
+      <th>Orphnge name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Number of orphans</th>
+      <th>Select orphan</th>
+    </tr>
+    <tr  *ngFor="let mlist of mulist">
+      <td>{{mlist.username}}</td>
+      <td>{{mlist.email}}</td>
+      <td>{{mlist.address}}</td>      
+      <td>{{mlist.city}}</td>
+      <td>{{mlist.nooforphan}}</td>
+      <div ng-if="mlist.city=mumbai">
+      <a href="/userrequest">select</a>
+      </div>
+       
+
+    </tr>
+  </table>
+</div>
+
+
+<!-- <div>
+  <input type="button" value="Full list" (click)="datalist()">
+  <table border="2px">
+    <tr>
+      <th>Orphnge name:</th>
+      <th>Email:</th>
+      <th>City:</th>
+      <th>Number of orphans:</th>
+    </tr>
+    <tr  *ngFor="let delist of dlist">
+      <td>{{delist.username}}</td>
+      <td>{{delist.email}}</td>
+      <td>{{delist.city}}</td>
+      <td>{{delist.nooforphan}}</td>
+    </tr>
+  </table>
+</div>  -->
+<!-- 
+<div id="demo" class="carousel slide" data-ride="carousel"> 
+     <!-- Indicators 
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- The slideshow 
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../assets/mother-teresa-calc_3210369b.jpg" alt="Los Angeles" width="100" height="100">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/Angular.png" alt="Chicago" width="100" height="100">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/mother-teresa-calc_3210369b.jpg" alt="New York" width="100" height="100">
+      </div>
+    </div>
+    
+    <!-- Left and right controls 
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+</div> -->
+<!---------------Contact Us------------------>
+<div id="id01" class="modal">
+    <form class="modal-content animate">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h1>Contact us</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                Mobile No<br>+91 8806480166 </div>
+            <div class="col-sm-4">
+                Email address <br>akashdhopte80@gmail.com</div>
+            <div class="col-sm-4">
+                Office Address <br>C-DAC Juhu</div>
+          </div>
+      </div>
+    </form>
+</div>
+  
+<!------------------About Us----------------->
+<div id="id02" class="modal">
+    <form class="modal-content animate">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h1>About us</h1>
+        <h5> 
+            •	We know the very best thing for a child is to be part of a loving people—it’s where they thrive. <br>
+            •	That’s why everything we do is designed to accomplish just that.<br> 
+            •	Our goal is a loving people and the end of institutionalized care for every child.<br> 
+            •	We believe that, together, we can change the way we care for children and help to get them into stable, loving, nurturing environments.<br>  
+            •	We believe in them, in you and in Miracles.<br>  
+            •	We believe in a world that listens closely to children and gives them a voice.<br> 
+            •	These children deserve the very best. A way out of their past of abandonment and a way forward into their bright future.<br>  
+            •	We believe in partnerships, and with generous gifts from people like you, we can make their dream of living with a family a reality.<br>  
+        </h5>
+        <h3>Sound impossible? Thankfully, that’s just an opinion.</h3>
+      </div>
+    </form>
+</div>
+</body>

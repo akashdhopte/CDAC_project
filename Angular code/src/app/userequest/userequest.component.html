@@ -1,0 +1,164 @@
+
+ <marquee> <h1>  {{msg}}</h1></marquee> 
+ <marquee> <h1>  {{Eventmsg}}</h1></marquee> 
+ 
+    <div style="height: 200px; width: 100%; margin-top:300px;" >
+
+      
+   
+        <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 req">
+              <div class="thumbnail">
+             
+            <button type="button" class="btn btn-info btn-lg info" data-toggle="modal" data-target="#myModal2">Appointment Request</button>
+          <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">Appointments</button>
+                  
+                </div>
+                <div class="modal-body">
+                <form>
+                    date: <input type="date" [(ngModel)]="obj.date" name="date"><br>
+                    time: <input type="time" [(ngModel)]="obj.time" name="time">
+                    <br><br>
+                    <button type="button" (click)="getappointment()" class="btn btn-info">Send Request</button>
+                    </form>
+      
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          </div>
+        </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+               
+                <button type="button" class="btn btn-info btn-lg info" data-toggle="modal" data-target="#myModal1">Request for Events</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal1" role="dialog">
+                  <div class="modal-dialog">
+                  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Events</h4>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <table>
+                            <tr>
+                          
+                                
+                              
+                              <td>
+                                Events:<select  [(ngModel)]="Evntobj.events" name="events" >
+                                  <option>Educational Camp</option>
+                                  <option>Medical Camp</option>
+                                  <option>other</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                date: <input type="date" [(ngModel)]="Evntobj.date" name="date">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                time: <input type="time" [(ngModel)]="Evntobj.time" name="time">
+                              </td>
+                              
+                            </tr>
+                          </table>
+
+                          <br>
+                          <button type="button" (click)="postevent()" class="btn btn-info">Send request</button>
+                            </form>
+              
+                    
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+      
+        </div>
+         </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+           
+                <button type="button" class="btn btn-info btn-lg info" data-toggle="modal" data-target="#myModal3">Donation</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal3" role="dialog">
+                  <div class="modal-dialog">
+                  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Requirement List</h4>
+                      </div>
+                      <form>
+                      <table border="2px">
+                          <tr>
+                              <th>Food(Quantity)</th>
+                              <th> stationary(Quantity)</th>
+                              <th>cloth(Quantity)</th> 
+                          </tr>
+                          <tr *ngFor="let aa of addl">
+                              <td>{{aa.food}}</td>
+                              <td>{{aa.stationary}}</td>
+                              <td>{{aa.cloths}}</td>
+                          </tr>
+                      </table>
+                      <br>
+                      <br>
+                      
+                      <!-- <div class="modal-body">
+                        <form #post="ngForm">
+                          <table border="2px">
+                            <tr>
+                              <th>Items</th>
+                              <th>Quantity</th>
+                            </tr>
+                            <tr>
+                              <td>Food</td>
+                              <td><input type="number" [(ngModel)]="addl.food" name="food"></td>
+                          
+                            </tr>
+                            <tr>
+                              <td>Stationary</td>
+                              <td><input type="number" [(ngModel)]="addl.stationary" name="stationary"></td>
+                             
+                            </tr>
+                            <tr>
+                              <td>Cloths</td>
+                              <td><input type="number" [(ngModel)]="addl.cloths" name="cloths"></td>
+                          </tr>
+                          </table>
+                          <br>-->
+                         <button type="button" (click)="getlist()" class="btn btn-info">Get List</button>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+    
+        

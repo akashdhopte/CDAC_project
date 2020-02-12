@@ -1,0 +1,16 @@
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    margin-top: 40px;
+  }
+  
+  #photo{
+    background-image: url("../../assets/smile.jpeg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: 100%;
+    
+  }

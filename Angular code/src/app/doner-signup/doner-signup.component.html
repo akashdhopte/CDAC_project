@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="py-5 text-center">
+    <h2>Register Here</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 order-md-6">
+      <form class="needs-validation" novalidate>
+        
+          <div class="mb-3">
+            <label for="firstName">Full name</label>
+            <input type="text" class="form-control" id="firstName"  placeholder="Enter name" value="" name="username" [(ngModel)]="doner.username" required>
+          </div>
+        <div class="mb-3">
+          <label for="email">Email <span class="text-muted"></span></label>
+          <input type="email" id="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" 
+            [(ngModel)]="doner.email" #email="ngModel" name="email" class="form-control" placeholder="Email address" required>
+          <div class="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="firstName">Password</label>
+          <input type="password" class="form-control" id="firstName" placeholder="Enter password" value="" name="password" [(ngModel)]="doner.password" required>
+        </div>
+        <div class="mb-3">
+          <label for="firstName">Confirm password</label>
+          <input type="password" class="form-control" id="firstName" placeholder="Confirm password" value="" required>
+        </div>
+        <div class="mb-3">
+          <label for="address2">Mobile Number <span class="text-muted"></span></label>
+          <input type="number" class="form-control" id="address2" name="mobile" [(ngModel)]="doner.mobile" placeholder="Enter Mobile Number">
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" (click)="donersignupcheck()" type="submit">Sign Up</button>
+        <a href="/donerLogin">Already have account?</a>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
